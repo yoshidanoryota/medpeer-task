@@ -14,7 +14,7 @@ class IdeasController < ApplicationController
 
     if @ideas
       render json: date
-    else
+    elsif @ideas.category.nil
       render status: 404, json: { status: 404 }
     end
 

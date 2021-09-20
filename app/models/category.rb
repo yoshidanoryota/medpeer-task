@@ -1,6 +1,4 @@
 class Category < ApplicationRecord
-  has_one :idea, optional: true 
+  has_one :idea
   validates :name, uniqueness: true
-  validates :name, presence: true
-
 end
