@@ -1,13 +1,11 @@
 class IdeaForm
-
   include ActiveModel::Model
 
-  attr_accessor :name,:body,:category_id
+  attr_accessor :name, :body, :category_id
 
   validates :body, presence: true
   validates :name, presence: true
   validates :category_id, presence: true
-  
 
   def save
     return if invalid?
